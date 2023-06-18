@@ -1,0 +1,64 @@
+-
+	tabs = [
+		{
+			title: 'Новинки',
+			mod: 'list_products__tabs_title--active_mod'
+		},
+		{
+			title: 'ТОП продаж'
+		},
+		{
+			title: 'Скидки'
+		},
+	]
+
+-
+	prod = [
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+		{
+			descr: 'Футболка мужская Exclusive 22032 ',
+			price: '245₴',
+		},
+	]
+include ../templates/mixins/m-product
+
+section.section.list_products
+	.section_in
+		.list_products__wrap
+			.list_products__tabs
+				each item, index in tabs
+					.list_products__tabs_title(class= item.mod tab-index= index)!= item.title
+			.list_products__list_w
+				ul.list_products__list
+					each item in prod
+						+product(item)
+			a.list_products__btn_w(href='#')
+				button.list_products__btn.main_btn Посмотреть каталог
+

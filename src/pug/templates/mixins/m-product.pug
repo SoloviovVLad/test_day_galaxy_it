@@ -1,0 +1,22 @@
+mixin product(data)
+	li.product_item
+		.product_item_in
+			a.product_item__img_w(href="#")
+				img.product_item__img(src="images/product/product_1.jpg", alt="")
+			.product_item__content
+				.product_item__rate
+					- var i = 0
+					while i < 4
+						.product_item__rate_icon
+							+icon('star', 'icon--size_mod')
+						- i++
+					.product_item__rate_icon
+						+icon('star_not_fill', 'icon--size_mod')
+				.product_item__size
+					a(href="#")  S
+					a(href="#").active M
+					a(href="#")  L
+				.product_item__descr
+					a(href="")!= data.descr
+				.product_item__price
+					span!= data.price

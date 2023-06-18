@@ -38,8 +38,8 @@ mixin header
 			.header_burger.js-burger-triger
 				span
 			nav.header_nav
-				//- .header_nav__overlay
-				//- include ../../blocks/header_catalog
+				.header_nav__overlay
+				include ../../blocks/header_catalog
 				ul.header_nav_list
 					each item in nav
 						li.header_nav_list__item(class= item.mod)
