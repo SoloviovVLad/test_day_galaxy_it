@@ -6,6 +6,9 @@
 
 //plugins
 
-// @import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/swiper-element-bundle.css';
 
 // components
+
+@import './components/hero.scss';

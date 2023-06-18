@@ -3,8 +3,17 @@
 :root {
 	--full-screen: calc(var(--vh, 1vh) * 100);
 
-	--height-header: 13.7rem;
+
+	@include bp($point_4, min) {
+		--height-header: 13.7rem;
+	}
+
+	@include bp($point_4 - 1) {
+		--height-header: 8.7rem;
+	}
+
 	// --height-footer: 28.6rem;
+	
 	--footer-indent-right: 7.6rem;
 
 	@include bp($point_0, min) {
@@ -102,9 +111,12 @@ body {
 .base {
 	width: 100%;
 	position: relative;
-	padding: var(--height-header) 0 0;
 
 	flex: 1 0 auto;
+
+	@include bp($point_4 - 1) {
+		padding: var(--height-header) 0 0;
+	}
 }
 
 a {
