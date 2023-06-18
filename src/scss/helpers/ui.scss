@@ -19,7 +19,7 @@
 		transition: color .3s ease-in-out;
 
 		&:hover {
-			color: $orange;
+			// color: $orange;
 		}
 	}
 
@@ -39,5 +39,32 @@
 	margin-left: 1rem;
 	margin-right: 1rem;
 
-	color: $gray_4;
+	// color: $gray_4;
+}
+
+.main_btn {
+	padding: 0 3rem;
+
+	min-width: 31.3rem;
+	min-height: 5.9rem;
+
+	font-size: 2rem;
+	font-family: $font_1;
+	font-weight: 500;
+	letter-spacing: .07em;
+
+	color: $black_1;
+
+	border: 1px solid $black_1;
+
+	transition: background .3s ease-in-out, color .3s ease-in-out;
+
+	a {
+		color: currentColor;
+	}
+
+	&:hover {
+		background: $black_1;
+		color: $white;
+	}
 }
