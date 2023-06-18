@@ -1,3 +1,58 @@
+-
+	nav = [
+		{
+			icon: true,
+			title: 'КАТАЛОГ',
+			mod: 'js-catalog',
+			list: true,
+		},
+		{
+			title: 'SALE'
+		},
+		{
+			title: 'ОПТ'
+		},
+		{
+			title: 'О НАС'
+		},
+		{
+			title: 'ОТЗЫВЫ'
+		},
+		{
+			title: 'ДОСТАВКА И ОПЛАТА'
+		},
+		{
+			title: 'КОНТАКТЫ'
+		},
+	]
+
+	icons = [
+		'search',
+		'heart',
+		'basket',
+		'user',
+	]
 mixin header
 	header.header
 		.header_in
+			.header_burger.js-burger-triger
+				span
+			nav.header_nav
+				.header_nav__overlay
+				include ../../blocks/header_catalog
+				ul.header_nav_list
+					each item in nav
+						li.header_nav_list__item(class= item.mod)
+							a.header_nav_list__link(href='#')!= item.title
+							if item.icon
+								.header_nav_list__icon
+									+icon('arrow_bottom', 'icon--size_mod')
+			.header_logo
+				a.header_logo__link(href='/')
+					img.header_logo__img(src="images/logo_header.png", alt="logo")
+			.header_icons
+				ul.header_icons_list
+					each icon in icons
+						li.header_icons_list__item
+							a.header_icons_list__link(href="#")
+								+icon(icon, 'icon--size_mod')

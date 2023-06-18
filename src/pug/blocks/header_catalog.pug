@@ -1,0 +1,59 @@
+-
+	btns = [
+		'Мужская одежда',
+		'Женская одежда',
+		'Детская одежда',
+	]
+
+	lists = [
+		{
+			title: 'Верхняя одежда',
+			list: [
+				'Футболки ПОЛО',
+				'Лоргсливы',
+				'Свитшоте Регланы',
+				'Толстовки Худи',
+				'Анораки Ветровки',
+				'Спортивные штаны'
+			]
+		},
+		{
+			title: 'Штаны',
+			list: [
+				'Футболки ПОЛО',
+				'Лоргсливы',
+				'Свитшоте Регланы',
+				'Толстовки Худи',
+				'Анораки Ветровки',
+				'Спортивные штаны'
+			]
+		},
+		{
+			title: 'Аксессуары',
+			list: [
+				'Футболки ПОЛО',
+				'Лоргсливы',
+				'Свитшоте Регланы',
+				'Толстовки Худи',
+				'Анораки Ветровки',
+				'Спортивные штаны'
+			]
+		},
+	]
+.header_catalog
+	.header_catalog_in
+		.header_catalog__back.js-catalog-back
+			+icon('arrow_bottom', 'icon--size_mod')
+		ul.header_catalog__btns_list
+			each btn in btns
+				li.header_catalog__btns_item
+					button.header_catalog__btns_btn.main_btn
+						a(href="#")!= btn
+		.header_catalog__nav
+			each col in lists
+				.header_catalog__nav_col
+					h3.header_catalog__nav_title!= col.title
+					ul.header_catalog_list
+						each item in col.list
+							li.header_catalog_list__item
+								a.header_catalog_list__link!= item
