@@ -1,0 +1,31 @@
+-
+	list = [
+		{
+			img: '1',
+			title: 'Акции- Новая серия',
+			descr: 'Мужские футболки с модными принтами в стиле Хайтек',
+		},
+		{
+			img: '2',
+			title: 'Успей до 10.04',
+			descr: 'Распродажа со скидками до 50%. Мужские футболки всех размеров.',
+		},
+		{
+			img: '3',
+			title: 'Скидки до 45%',
+			descr: 'На все футболки серии Лето 2019 при заказе от 2000 грн.',
+		}
+	]
+
+section.section.sale_block
+	.section_in
+		.sale_block__wrap
+			each item in list
+				.sale_card
+					.sale_card_in
+						.sale_card__img_w
+							img.sale_card__img(src=`images/sale/sale_${item.img}.png`, alt="sale img")
+						.sale_card__content
+							a.sale_card__title(href="#")
+								h3!= item.title
+							.sale_card__descr!= item.descr

@@ -2,12 +2,11 @@
 	position: fixed;
 	top: 0;
 	left: 0;
+	right: 0;
 
 	height: var(--height-header);
 	width: 100%;
-	padding: 3.3rem var(--gl-indent) 0;
-
-	background-color: $white;
+	padding: 1rem var(--gl-indent) 0;
 
 	will-change: transform;
 
@@ -365,9 +364,7 @@
 
 	width: 100%;
 	height: 100%;
-	padding: 2rem var(--gl-indent);
-
-	background-color: $white;
+	padding: 0 var(--gl-indent);
 
 	transition: transform .3s ease-in-out;
 
@@ -395,6 +392,9 @@
 	position: relative;
 	margin: 0 auto;
 	max-width: $page_width;
+
+	background-color: $white;
+	padding: 2rem;
 }
 
 .header_catalog__back {
@@ -407,6 +407,10 @@
 	transform: rotate(90deg);
 
 	cursor: pointer;
+
+	@include bp($point_1, min) {
+		display: none;
+	}
 }
 
 

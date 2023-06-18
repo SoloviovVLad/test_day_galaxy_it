@@ -1,0 +1,42 @@
+-
+	slides = [
+		{
+			title: '<span>МУЖСКАЯ</span><span>КОЛЛЕКЦИЯ</span>',
+			descr: 'Распродажа коллекций со скидками до 50%, доставка до вашего склада',
+		},
+		{
+			title: '<span>СУПЕР МУЖСКАЯ</span><span>КОЛЛЕКЦИЯ</span>',
+			descr: 'Распродажа коллекций со скидками до 50%, доставка до вашего склада',
+		},
+		{
+			title: '<span>МЕГА МУЖСКАЯ</span><span>КОЛЛЕКЦИЯ</span>',
+			descr: 'Распродажа коллекций со скидками до 50%, доставка до вашего склада',
+		},
+		{
+			title: '<span>ЧЕТКАЯ МУЖСКАЯ</span><span>КОЛЛЕКЦИЯ</span>',
+			descr: 'Распродажа коллекций со скидками до 50%, доставка до вашего склада',
+		},
+	]
+
+section.section.hero
+	.section_in
+		.hero__pagination.js-hero-pagination
+		.hero__slider.swiper.js-hero-slider.swiper-fade
+			.hero__wrapper.swiper-wrapper
+				each item in slides
+					.hero_slide.swiper-slide
+						.hero_slide__content
+							.hero_slide__content_in
+								.hero_slide__title!= item.title
+								.hero_slide__descr!= item.descr
+								a.hero_slide__btn_w(href='#')
+									button.hero_slide__btn.main_btn ПОДРОБНЕЕ
+						.hero_slide__picture
+							.hero_slide__picture_el
+								+icon('hero_el','icon--size_mod')
+							+picture({
+								class: 'hero_slide__img_w',
+								class_img: 'hero_slide__img',
+								img: `images/hero_img.png`,
+								alt: 'hero img'
+							})
